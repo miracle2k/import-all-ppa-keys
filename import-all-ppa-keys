@@ -69,7 +69,7 @@ fi
 
 # extract launchpad project names
 slist=(` grep launchpad $sourcesList | sed -e 's/.*net\/\(.*\)\/.*/\1/' -e 's/\/.*$//' `)
-num=${#slist}
+num=${#slist[*]}
 if [ "$slist" != "" ]; then
     for ((i=0;i<$num;i++)); do
         if [ "${slist[${i}]}" != "" ]; then
